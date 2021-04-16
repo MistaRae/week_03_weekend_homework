@@ -1,9 +1,10 @@
-{% extends base.html %}
+{% extends "base.html" %}
 
-{% block content}
+{% block content %}
 <div>
-    {{ }}
+    {% if winner %}
+        <p>{{ winner.name }} has won by playing {{ winner.gesture }}</p>
+    {% endif %}
 </div>
-
 
 {% endblock %}
