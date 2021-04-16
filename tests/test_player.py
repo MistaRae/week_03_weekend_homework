@@ -6,3 +6,4 @@ class TestPlayer(unittest.TestCase):
     def test_instance_variables(self):
         self.player = Player("Mark", "Rock")
         self.assertEqual("Mark", self.player.name)
+        self.assertEqual("Rock", self.player.gesture)
