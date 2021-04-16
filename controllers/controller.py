@@ -9,5 +9,5 @@ def home():
     return "Welcome to Rock, Paper Scissors!"
 
 @app.route("/<player_1>/<player_2>")
-def game(player_1, player_2):
-    return game.play(player_1, player_2)
+def play_game(player_1, player_2):
+    return play(player_1, player_2)
