@@ -6,6 +6,11 @@
     {% if winner %}
         <p>{{ winner.name }} has won by playing {{ winner.gesture }}</p>
     {% endif %}
+
+    {% if winner == None %}
+        <p>It's a Draw!</p>
+    {% endif %}
+
 </div>
 
 {% endblock %}

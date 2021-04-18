@@ -9,7 +9,7 @@ class Game:
 
 def play(player_1, player_2):    
         winner = None
-
+     
         if player_1.gesture == "Rock" and player_2.gesture == "Scissors":
             winner = player_1
         if player_1.gesture == "Scissors" and player_2.gesture == "Rock":
