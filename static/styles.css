@@ -11,12 +11,19 @@ body {
 body > header > ul {
     display: flex;
     flex-direction: row;  
-    justify-content: space-around;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+body > header > ul > li {
+    padding-inline-end: 10px;
 }
 
 body > header > ul > li > a:link {
     text-decoration: none;
     color: white;
+    /* padding-right: 5px; */
 }
 
 body > header > ul > li > a:visited {
@@ -27,7 +34,7 @@ body > header > ul > li > a:hover {
 }
 
 body > header > ul {
-    padding: 0
+    padding: 10px
 }
 
 body > h1 {
@@ -40,4 +47,25 @@ body > h2 {
 
 body > p {
     padding-left: 15px;
+}
+
+body > div > p {
+    padding-left: 15px;
+}
+
+body > div > form {
+    width: 50%;
+    /* display:flex; */
+    /* justify-content: flex-start; */
+    /* flex-wrap: nowrap; */
+}
+
+#label {
+justify-content: left;}
+
+.form-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    padding-inline-start: 15px;
 }

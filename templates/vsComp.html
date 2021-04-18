@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
+<div class="form-container">
     <form action="/PvC" method="post">
-        <label for="player_1" id="player-name">Player Name</label>
-        <input type="text" name="player_1">
-        <label for="P1-gesture", id="player-gesture">Player Gesture</label>
+        <label for="player_1" id="label">Player Name</label>
+        <input type="text" name="player_1" >
+<br>
+        <label for="P1-gesture", id="label">Player Gesture</label>
         <input type="text" name="P1-gesture">
+<br>
         <input type="submit" value="Submit">
     </form>
 </div>
