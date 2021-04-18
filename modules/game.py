@@ -8,24 +8,29 @@ class Game:
 
 
 def play(player_1, player_2):    
-    winner = None
+        winner = None
 
-    if player_1.gesture == "Rock" and player_2.gesture == "Scissors":
-        winner = player_1
-    if player_1.gesture == "Scissors" and player_2.gesture == "Rock":
-        winner = player_2
+        if player_1.gesture == "Rock" and player_2.gesture == "Scissors":
+            winner = player_1
+        if player_1.gesture == "Scissors" and player_2.gesture == "Rock":
+            winner = player_2
 
-    if player_1.gesture == "Paper" and player_2.gesture == "Rock":
-        winner = player_1
-    if player_1.gesture == "Rock" and player_2.gesture == "Paper":
-        winner = player_2
+        if player_1.gesture == "Paper" and player_2.gesture == "Rock":
+            winner = player_1
+        if player_1.gesture == "Rock" and player_2.gesture == "Paper":
+            winner = player_2
 
-    if player_1.gesture == "Scissors" and player_2.gesture == "Paper":
-        winner = player_1
-    if player_1.gesture == "Paper" and player_2.gesture == "Scissors":
-        winner = player_2
+        if player_1.gesture == "Scissors" and player_2.gesture == "Paper":
+            winner = player_1
+        if player_1.gesture == "Paper" and player_2.gesture == "Scissors":
+            winner = player_2
 
-    return winner
+        return winner
+
+class Computer:
+    def __init__(self, name, gesture):
+        self.name = name
+        self.gesture = gesture
 
     # if not winner:
     #     return "None"

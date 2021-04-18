@@ -1,5 +1,6 @@
 import unittest
 from modules.game import Game
+from modules import game
 from modules.player import Player
 
 
@@ -15,23 +16,23 @@ class TestGame(unittest.TestCase):
       
         self.assertEqual("Rock, Paper, Scissors", self.game.name)
 
-    def test_game_recognises_draw(self):
-        self.assertEqual("the winning player is: None", self.game.play(self.mark,self.mark))
+    def test_game_recognizes_draw(self):
+        self.assertEqual(None, game.play(self.mark,self.mark))
 
     def test_game_rock_beats_scissors(self):
-        self.assertEqual("Mark wins by playing Rock!", self.game.play(self.chris,self.mark))
+        self.assertEqual(self.mark, game.play(self.chris,self.mark))
 
     def test_game_rock_beats_scissors_reversed(self):
-        self.assertEqual("Mark wins by playing Rock!", self.game.play(self.mark,self.chris))
+        self.assertEqual(self.mark, game.play(self.mark,self.chris))
         
     def test_game_paper_beats_rock(self):
-        self.assertEqual("Jill wins by playing Paper!", self.game.play(self.jill,self.mark))
+        self.assertEqual(self.jill, game.play(self.jill,self.mark))
     
     def test_game_paper_beats_rock_reversed(self):
-        self.assertEqual("Jill wins by playing Paper!", self.game.play(self.mark,self.jill))
+        self.assertEqual(self.jill, game.play(self.mark,self.jill))
 
     def test_game_scissors_beats_paper(self):
-        self.assertEqual("Chris wins by playing Scissors!", self.game.play(self.chris,self.jill))
+        self.assertEqual(self.chris, game.play(self.chris,self.jill))
     
     def test_game_scissors_beats_paper_reversed(self):
-        self.assertEqual("Chris wins by playing Scissors!", self.game.play(self.jill,self.chris))
+        self.assertEqual(self.chris, game.play(self.jill,self.chris))
